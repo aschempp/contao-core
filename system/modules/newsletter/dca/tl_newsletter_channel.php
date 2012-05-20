@@ -77,7 +77,7 @@ $GLOBALS['TL_DCA']['tl_newsletter_channel'] = array
 				'href'                => 'act=edit',
 				'icon'                => 'header.gif',
 				'button_callback'     => array('tl_newsletter_channel', 'editHeader'),
-				'attributes'          => 'class="edit-header"'
+				'attributes'          => 'class="contextoperation"'
 			),
 			'copy' => array
 			(

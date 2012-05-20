@@ -90,7 +90,7 @@ $GLOBALS['TL_DCA']['tl_news_archive'] = array
 				'href'                => 'act=edit',
 				'icon'                => 'header.gif',
 				'button_callback'     => array('tl_news_archive', 'editHeader'),
-				'attributes'          => 'class="edit-header"'
+				'attributes'          => 'class="contextoperation"'
 			),
 			'copy' => array
 			(

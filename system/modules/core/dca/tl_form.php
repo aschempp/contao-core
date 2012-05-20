@@ -78,7 +78,7 @@ $GLOBALS['TL_DCA']['tl_form'] = array
 				'href'                => 'act=edit',
 				'icon'                => 'header.gif',
 				'button_callback'     => array('tl_form', 'editHeader'),
-				'attributes'          => 'class="edit-header"'
+				'attributes'          => 'class="contextoperation"'
 			),
 			'copy' => array
 			(

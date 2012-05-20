@@ -92,7 +92,7 @@ $GLOBALS['TL_DCA']['tl_style_sheet'] = array
 				'href'                => 'table=tl_style_sheet&amp;act=edit',
 				'icon'                => 'header.gif',
 				'button_callback'     => array('tl_style_sheet', 'editHeader'),
-				'attributes'          => 'class="edit-header"'
+				'attributes'          => 'class="contextoperation"'
 			),
 			'copy' => array
 			(

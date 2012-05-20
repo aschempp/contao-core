@@ -77,7 +77,7 @@ $GLOBALS['TL_DCA']['tl_faq_category'] = array
 				'href'                => 'act=edit',
 				'icon'                => 'header.gif',
 				'button_callback'     => array('tl_faq_category', 'editHeader'),
-				'attributes'          => 'class="edit-header"'
+				'attributes'          => 'class="contextoperation"'
 			),
 			'copy' => array
 			(

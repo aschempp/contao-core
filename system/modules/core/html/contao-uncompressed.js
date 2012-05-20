@@ -1660,7 +1660,7 @@ var ContextMenu =
 	 */
 	initialize: function() {
 		// Hide the edit header buttons
-		$$('a.edit-header').each(function(el) {
+		$$('a.contextoperation').each(function(el) {
 			el.addClass('invisible');
 		});
 
@@ -1669,7 +1669,7 @@ var ContextMenu =
 			var el2 = el.getNext('a');
 
 			// Return if there is no edit header button
-			if (!el2 || !el2.hasClass('edit-header')) {
+			if (!el2 || !el2.hasClass('contextoperation')) {
 				return;
 			}
 

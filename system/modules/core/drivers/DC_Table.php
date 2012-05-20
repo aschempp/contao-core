@@ -3442,9 +3442,9 @@ window.addEvent(\'domready\', function() {
 </div>' . \Message::generate(true);
 
 		// Get all details of the parent record
-		$objParent = $this->Database->prepare("SELECT * FROM " . $this->ptable . " WHERE id=?")
+		$objParent = $this->Database->prepare("SELECT *" . ($blnHasSorting ? ", (SELECT id FROM " . $this->strTable . " WHERE pid=? ORDER BY sorting DESC LIMIT 1) AS clipboard_end_position" : '') . " FROM " . $this->ptable . " WHERE id=?")
 									->limit(1)
-									->execute(CURRENT_ID);
+									->execute($this->intId, CURRENT_ID);
 
 		if ($objParent->numRows < 1)
 		{

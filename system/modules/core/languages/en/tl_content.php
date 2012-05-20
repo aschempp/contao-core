@@ -128,6 +128,7 @@ $GLOBALS['TL_LANG']['tl_content']['edit']        = array('Edit element', 'Edit c
 $GLOBALS['TL_LANG']['tl_content']['editheader']  = array('Edit article settings', 'Edit the settings of the article');
 $GLOBALS['TL_LANG']['tl_content']['pasteafter']  = array('Paste at the top', 'Paste after content element ID %s');
 $GLOBALS['TL_LANG']['tl_content']['pastenew']    = array('Add new at the top', 'Add new after content element ID %s');
+$GLOBALS['TL_LANG']['tl_content']['pasteend']    = array('Add new at the end', 'Add new after the last content element');
 $GLOBALS['TL_LANG']['tl_content']['toggle']      = array('Toggle visibility', 'Toggle the visibility of element ID %s');
 $GLOBALS['TL_LANG']['tl_content']['editalias']   = array('Edit source element', 'Edit the source element ID %s');
 $GLOBALS['TL_LANG']['tl_content']['editarticle'] = array('Edit article', 'Edit article ID %s');

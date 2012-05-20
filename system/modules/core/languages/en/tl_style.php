@@ -122,4 +122,5 @@ $GLOBALS['TL_LANG']['tl_style']['delete']     = array('Delete format definition'
 $GLOBALS['TL_LANG']['tl_style']['editheader'] = array('Edit style sheet', 'Edit the style sheet settings');
 $GLOBALS['TL_LANG']['tl_style']['pasteafter'] = array('Paste at the top', 'Paste after format definition ID %s');
 $GLOBALS['TL_LANG']['tl_style']['pastenew']   = array('Add new at the top', 'Add new after format definition ID %s');
+$GLOBALS['TL_LANG']['tl_style']['pasteend']   = array('Add new at the end', 'Add new after the last format definition');
 $GLOBALS['TL_LANG']['tl_style']['toggle']     = array('Toggle visibility', 'Toggle the visibility of format definition ID %s');

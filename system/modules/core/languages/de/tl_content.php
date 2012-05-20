@@ -127,6 +127,7 @@ $GLOBALS['TL_LANG']['tl_content']['edit']        = array('Element bearbeiten', '
 $GLOBALS['TL_LANG']['tl_content']['editheader']  = array('Artikel bearbeiten', 'Die Artikeleinstellungen bearbeiten');
 $GLOBALS['TL_LANG']['tl_content']['pasteafter']  = array('Oben einfügen', 'Nach dem Inhaltselement ID %s einfügen');
 $GLOBALS['TL_LANG']['tl_content']['pastenew']    = array('Neues Element oben erstellen', 'Neues Element nach dem Inhaltselement ID %s erstellen');
+$GLOBALS['TL_LANG']['tl_content']['pasteend']    = array('Neues Element am Ende erstellen', 'Neues Element an letzter Position erstellen');
 $GLOBALS['TL_LANG']['tl_content']['toggle']      = array('Sichtbarkeit ändern', 'Die Sichtbarkeit des Inhaltselements ID %s ändern');
 $GLOBALS['TL_LANG']['tl_content']['editalias']   = array('Quellelement bearbeiten', 'Das Quellelement ID %s bearbeiten');
 $GLOBALS['TL_LANG']['tl_content']['editarticle'] = array('Artikel bearbeiten', 'Artikel ID %s bearbeiten');

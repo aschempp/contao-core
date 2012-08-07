@@ -447,24 +447,7 @@ class Email extends \System
 					$this->strImageDir = TL_ROOT . '/';
 				}
 
-				$arrMatches = array();
-				preg_match_all('/(src=|url\()"([^"]+\.(jpe?g|png|gif|bmp|tiff?|swf))"/Ui', $this->strHtml, $arrMatches);
-				$strBase = \Environment::get('base');
-
-				// Check for internal images
-				foreach (array_unique($arrMatches[2]) as $url)
-				{
-					// Try to remove the base URL
-					$src = str_replace($strBase, '', $url);
-					$src = rawurldecode($src); // see #3713
-
-					// Embed the image if the URL is now relative
-					if (!preg_match('@^https?://@', $src) && file_exists($this->strImageDir . $src))
-					{
-						$cid = $this->objMessage->embed(\Swift_EmbeddedFile::fromPath($this->strImageDir . $src));
-						$this->strHtml = str_replace(array('src="' . $url . '"', 'url("' . $url . '"'), array('src="' . $cid . '"', 'url("' . $cid . '"'), $this->strHtml);
-					}
-				}
+				$this->strHtml = preg_replace_callback('/<[^>]*((src=|url\()["\']?)(.+\.(jpe?g|png|gif|bmp|tiff?|swf))(["\' ]?(\)?))[^>]*>/Ui', array($this, 'replaceInlineImages'), $this->strHtml);
 			}
 
 			$this->objMessage->setBody($this->strHtml, 'text/html');
@@ -573,5 +556,35 @@ class Email extends \System
 		}
 
 		return $arrReturn;
+	}
+
+
+	/**
+	 * Callback for preg_replace_callback
+	 * We can't use a closure or anonymous function, because we need object properties from $this
+	 * @param string
+	 * @return string
+	 */
+	protected function replaceInlineImages($match)
+	{
+		static $strBase;
+
+		if ($strBase === null)
+		{
+			$strBase = \Environment::get('base');
+		}
+
+		// Try to remove the base URL
+		$src = str_replace($strBase, '', $match[3]);
+		$src = rawurldecode($src); // see #3713
+
+		// Embed the image if the URL is now relative
+		if (!preg_match('@^https?://@', $src) && file_exists($this->strImageDir . $src))
+		{
+			$cid = $this->objMessage->embed(\Swift_EmbeddedFile::fromPath($this->strImageDir . $src));
+			return str_replace($match[1].$match[3].$match[5], $match[2].'"'.$cid.'"'.$match[6], $match[0]);
+		}
+
+		return $match[0];
 	}
 }

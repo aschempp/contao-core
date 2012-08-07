@@ -568,6 +568,7 @@ class Email extends \System
 	protected function replaceInlineImages($match)
 	{
 		static $strBase;
+		static $arrCid = array();
 
 		if ($strBase === null)
 		{
@@ -581,8 +582,12 @@ class Email extends \System
 		// Embed the image if the URL is now relative
 		if (!preg_match('@^https?://@', $src) && file_exists($this->strImageDir . $src))
 		{
-			$cid = $this->objMessage->embed(\Swift_EmbeddedFile::fromPath($this->strImageDir . $src));
-			return str_replace($match[1].$match[3].$match[5], $match[2].'"'.$cid.'"'.$match[6], $match[0]);
+			if (!isset($arrCid[$src]))
+			{
+				$arrCid[$src] = $this->objMessage->embed(\Swift_EmbeddedFile::fromPath($this->strImageDir . $src));
+			}
+
+			return str_replace($match[1].$match[3].$match[5], $match[2].'"'.$arrCid[$src].'"'.$match[6], $match[0]);
 		}
 
 		return $match[0];

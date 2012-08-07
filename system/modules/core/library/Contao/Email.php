@@ -447,7 +447,7 @@ class Email extends \System
 					$this->strImageDir = TL_ROOT . '/';
 				}
 
-				$this->strHtml = preg_replace_callback('/<[^>]*((src=|url\()["\']?)(.+\.(jpe?g|png|gif|bmp|tiff?|swf))(["\' ]?(\)?))[^>]*>/Ui', array($this, 'replaceInlineImages'), $this->strHtml);
+				$this->strHtml = preg_replace_callback('/<[^>]*((src=|url\()["\']??)(.+\.(jpe?g|png|gif|bmp|tiff?|swf))(["\' ]??(\)??))[^>]*>/Ui', array($this, 'replaceInlineImages'), $this->strHtml);
 			}
 
 			$this->objMessage->setBody($this->strHtml, 'text/html');

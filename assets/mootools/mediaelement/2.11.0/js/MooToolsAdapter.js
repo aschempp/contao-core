@@ -18,7 +18,7 @@
  * limitations under the License.
  * 
  * Extended by Andreas Schempp to support all mediaelement.js functions.
- * @author Andreas Schempp <http://iserv.ch>
+ * @author Andreas Schempp <andreas.schempp@terminal42.ch>
  */
 
 /*
@@ -253,7 +253,7 @@
         /**
          * Read arbitrary data associated with the matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param name:A string naming the piece of data to read
          * 
@@ -266,7 +266,7 @@
         /**
          * Remove an attribute from each element in the set of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param propertyName:The attribute to remove
          * 
@@ -282,7 +282,7 @@
         /**
          * Adds the specified class(es) to each of the set of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param className:One or more class names to be added
          * 
@@ -299,7 +299,7 @@
          * Remove a single class, multiple classes, or all classes from each
          * element in the set of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param className:One or more space-separated classes to be removed
          * 
@@ -322,7 +322,7 @@
         /**
          * nsert every element in the set of matched elements before the target
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param element:A selector, element, HTML string, or jQuery object
          * 
@@ -336,14 +336,14 @@
         },
 
         /**
-         * Get the descendants of each element in a set of matched elements,
-         * filtered by a selector, jQuery object, or element
+         * Find all elements that match a given selector which are descendants of the
+         * elements selected the MooToolsAdapter.
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @param selector:String - A css3 selector;
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
-         * @param selector:A string containing a selector expression
-         * 
-         * @return MooToolsAdapter
+         * @return MooToolsAdapter A MooToolsAdapter containing the selected
+         *     elements.
          */
         find: function(selector){
             var elements = [];
@@ -357,7 +357,7 @@
          * Get the children of each element in a set of matched elements,
          * optionally filtered by a selector
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param selector:A string containing a selector expression
          * 
@@ -375,7 +375,7 @@
          * Get the first element that matches the selector, beginning at the
          * current element and progressing up through the DOM tree
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param selector:A string containing a selector expression
          * 
@@ -394,7 +394,7 @@
          * Get the siblings of each element in the set of matched elements,
          * optionally filtered by a selector
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param selector:A string containing a selector expression
          * 
@@ -412,7 +412,7 @@
          * Insert content, specified by the parameter, to the end of each
          * element in the set of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param content:DOM element, HTML string, or jQuery object to insert
          * 
@@ -434,7 +434,7 @@
         /**
          * Create a deep copy of the set of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @return MooToolsAdapter
          */
@@ -449,7 +449,7 @@
         /**
          * Remove the set of matched elements from the DOM
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @return MooToolsAdapter
          */
@@ -466,7 +466,7 @@
          * Bind an event handler to the "keydown" JavaScript event, or trigger
          * that event on an element
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param fn:A function to execute each time the event is triggered
          * 
@@ -480,7 +480,7 @@
          * Bind an event handler to the "click" JavaScript event, or trigger
          * that event on an element
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param fn:A function to execute each time the event is triggered
          * 
@@ -494,7 +494,7 @@
          * Bind an event handler to the "resize" JavaScript event, or trigger
          * that event on an element
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param fn:A function to execute each time the event is triggered
          * 
@@ -508,7 +508,7 @@
          * Bind two handlers to the matched elements, to be executed when the
          * mouse pointer enters and leaves the elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param fn1:A function to execute when the mouse pointer enters the element
          * @param fn2:A function to execute when the mouse pointer leaves the element
@@ -527,7 +527,7 @@
         /**
          * Iterate over a jQuery object, executing a function for each matched element
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param fn:A function to execute for each matched element
          * 
@@ -545,7 +545,7 @@
          * element, or jQuery object and return true if at least one of these
          * elements matches the given arguments
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param selector:A string containing a selector expression
          * 
@@ -562,7 +562,7 @@
          * Get the value of a style property for the first element in the set
          * of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param property:The CSS property
          * @param value:The CSS property value
@@ -588,7 +588,7 @@
         /**
          * Set the CSS width of each element in the set of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param value:An integer representing the number of pixels
          * 
@@ -611,7 +611,7 @@
          * Get the current computed width for the first element in the set of
          * matched elements, including padding and border
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param includeMargin:A Boolean indicating whether to include the element's margin
          * 
@@ -624,7 +624,7 @@
         /**
          * Set the CSS height of each element in the set of matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param value:An integer representing the number of pixels
          * 
@@ -647,7 +647,7 @@
          * Get the current coordinates of the first element in the set of
          * matched elements, relative to the document
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @return An object containing the properties top and left
          */
@@ -660,7 +660,7 @@
          * Get the current coordinates of the first element in the set of
          * matched elements, relative to the offset parent
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @return An object containing the properties top and left
          */
@@ -672,7 +672,7 @@
         /**
          * Stop the currently-running animation on the matched elements
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @param clearQueue:A Boolean indicating whether to remove queued animation
          * @param jumpToEnd:A Boolean indicating whether to complete the current animation immediately
@@ -695,7 +695,7 @@
         /**
          * Hide the matched elements by fading them to transparent
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @return MooToolsAdapter
          */
@@ -717,7 +717,7 @@
         /**
          * Display the matched elements by fading them to opaque
          * 
-         * @author Andreas Schempp <http://iserv.ch>
+         * @author Andreas Schempp <andreas.schempp@terminal42.ch>
          * 
          * @return MooToolsAdapter
          */

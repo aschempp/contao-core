@@ -399,6 +399,7 @@ class Ajax extends \Backend
 			}
 		}
 
+        // HOOK: pass unknown actions or unknown drivers to callback functions
 		if (isset($GLOBALS['TL_HOOKS']['executePostActions']) && is_array($GLOBALS['TL_HOOKS']['executePostActions']))
 		{
 			foreach ($GLOBALS['TL_HOOKS']['executePostActions'] as $callback)
